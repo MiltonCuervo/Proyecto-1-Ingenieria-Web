@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ContactItem } from "@/components/molecules/ContactItem";
+import { Icon } from "@/components/atoms/Icon";
 import { SkillGroup } from "@/components/organisms/SkillGroup";
 import { languages, profile, programmingLanguages, skillCategories } from "@/data/portfolio";
 
@@ -17,13 +18,13 @@ export function SidebarLeft() {
       </div>
 
       <section className="sidebar-group sidebar-contact" aria-label="Datos personales">
-        <ContactItem label="Ubicación" value={<><MapPin size={13} aria-hidden="true" /> {profile.location}</>} />
-        <ContactItem label="Teléfono" value={<a href={`tel:${profile.phone.replace(/\s/g, "")}`}><Phone size={13} aria-hidden="true" /> {profile.phone}</a>} />
-        <ContactItem label="Correo" value={<a href={`mailto:${profile.email}`}><Mail size={13} aria-hidden="true" /> Email</a>} />
+        <ContactItem label="Ubicación" value={<><Icon icon={MapPin} size={13} /> {profile.location}</>} />
+        <ContactItem label="Teléfono" value={<a href={`tel:${profile.phone.replace(/\s/g, "")}`}><Icon icon={Phone} size={13} /> {profile.phone}</a>} />
+        <ContactItem label="Correo" value={<a href={`mailto:${profile.email}`}><Icon icon={Mail} size={13} /> {profile.email}</a>} />
       </section>
 
       <SkillGroup title="Idiomas" skills={languages} />
-      <SkillGroup title="Lenguajes" skills={programmingLanguages} />
+      <SkillGroup title="Lenguajes de programación" skills={programmingLanguages} />
 
       <section className="sidebar-group" aria-label="Habilidades adicionales">
         <h3>Habilidades extra</h3>

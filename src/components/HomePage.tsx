@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { ModalDialog } from "@/components/molecules/ModalDialog";
+import { Icon } from "@/components/atoms/Icon";
 import { EducationSection } from "@/components/organisms/EducationSection";
 import { ExperienceSection } from "@/components/organisms/ExperienceSection";
 import { KnowledgeSection } from "@/components/organisms/KnowledgeSection";
@@ -26,11 +27,7 @@ export function HomePage() {
       {aboutOpen && (
         <ModalDialog title="Un poco sobre mí" eyebrow="Perfil personal" onClose={() => setAboutOpen(false)}>
           <p>{profile.about}</p>
-          {profile.email ? (
-            <a className="about-contact" href={`mailto:${profile.email}`}><Mail size={16} /> Hablemos <ArrowUpRight size={14} /></a>
-          ) : (
-            <p className="modal-hint">Para recibir mensajes, agrega tu correo en el archivo de datos del portafolio.</p>
-          )}
+          <a className="about-contact" href={`mailto:${profile.email}`}><Icon icon={Mail} size={16} /> Hablemos <Icon icon={ArrowUpRight} size={14} /></a>
         </ModalDialog>
       )}
     </MainLayout>

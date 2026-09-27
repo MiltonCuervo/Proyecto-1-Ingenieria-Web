@@ -33,12 +33,13 @@ export interface Project {
   details: string;
   technologies: string[];
   repoUrl?: string;
+  repoVisibility?: "public" | "private";
   demoUrl?: string;
   theme: "violet" | "mint" | "coral";
 }
 
 export interface SocialProfile {
   label: string;
-  href?: string;
+  href: string;
   icon: LucideIcon;
 }

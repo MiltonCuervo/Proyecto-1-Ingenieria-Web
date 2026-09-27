@@ -7,7 +7,7 @@ interface SectionHeadingProps {
 export function SectionHeading({ title, description, id }: SectionHeadingProps) {
   return (
     <header className="section-heading">
-      <p className="eyebrow">Portafolio · Ingeniería de Sistemas</p>
+      <p className="eyebrow">Milton Cuervo</p>
       <h2 id={id}>{title}</h2>
       <p className="section-heading__description">{description}</p>
     </header>

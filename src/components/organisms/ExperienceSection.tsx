@@ -5,7 +5,7 @@ import { experience } from "@/data/portfolio";
 export function ExperienceSection() {
   return (
     <section className="content-section experience-section" id="experiencia" aria-labelledby="experience-title">
-      <SectionHeading title="Experiencia" id="experience-title" description="Automatización, desarrollo y analítica en proyectos del sector público y financiero." />
+      <SectionHeading title="Experiencia" id="experience-title" description="Experiencia en la Alcaldía de El Retiro, la Universidad de Antioquia y el sector financiero." />
       <div className="experience-card">
         {experience.map((item) => (
           <article className="experience-item" key={`${item.organization}-${item.role}`}>
