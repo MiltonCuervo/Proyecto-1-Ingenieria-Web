@@ -2,6 +2,8 @@
 
 Este es mi portafolio para el proyecto de Ingeniería Web. Lo desarrollé con Next.js, React, TypeScript y Tailwind CSS a partir del diseño de referencia de Figma. Incluye mi perfil, experiencia, formación, habilidades y algunos proyectos en los que he trabajado.
 
+Sitio publicado: [milton-cuervo-portafolio.vercel.app](https://milton-cuervo-portafolio.vercel.app/)
+
 ## Para ejecutarlo
 
 Necesitas Node.js 20.9 o posterior y pnpm. Si pnpm no está disponible en tu terminal, puedes habilitarlo con `corepack enable` y abrir una terminal nueva.
