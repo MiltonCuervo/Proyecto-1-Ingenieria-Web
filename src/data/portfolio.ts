@@ -1,107 +1,148 @@
 import {
-  Accessibility,
   Braces,
   ChartNoAxesCombined,
   CodeXml,
   Github,
   Linkedin,
-  Lightbulb,
   MonitorSmartphone,
   Palette,
+  Sparkles,
 } from "lucide-react";
-import type { Education, Knowledge, Project, Skill, SocialProfile } from "@/types/portfolio";
+import type { Education, Experience, Knowledge, Project, Skill, SocialProfile } from "@/types/portfolio";
 
-/** Centraliza el contenido editable para que actualizar el portafolio no requiera tocar la UI. */
+/** Contenido de la hoja de vida, separado de la presentación para facilitar su edición. */
 export const profile = {
-  name: "Milton Cuervo",
-  role: "Estudiante de Ingeniería de Sistemas",
-  headline: "Construyo experiencias digitales útiles y cuidadas.",
+  name: "Milton Alejandro Cuervo Ramírez",
+  role: "Ingeniero de Sistemas",
+  headline: "Automatización, datos e IA aplicada al negocio.",
   introduction:
-    "Soy estudiante de Ingeniería de Sistemas interesado en el desarrollo frontend, el diseño de interfaces y la creación de productos web accesibles.",
+    "Ingeniero de Sistemas orientado a resultados, con experiencia en automatización empresarial, análisis de datos e iniciativas de inteligencia artificial aplicada.",
   about:
-    "Me gusta convertir ideas en experiencias claras, rápidas y fáciles de usar. En cada proyecto combino pensamiento de ingeniería, curiosidad por el diseño y ganas de aprender. Actualmente estoy fortaleciendo mis habilidades en desarrollo web moderno y trabajo colaborativo.",
-  age: "",
-  residence: "",
-  availability: "",
-  address: "",
-  email: "", // Agrega aquí el correo que quieras publicar.
+    "Transformo datos complejos en decisiones claras y conecto la tecnología con las necesidades operativas de las organizaciones. He desarrollado automatizaciones con Power Platform y Python, impulsado iniciativas de IA aplicada y participado en aplicaciones de ciclo completo, desde la arquitectura hasta su evolución en producción. Me motiva comprender el negocio y diseñar sistemas con impacto medible y duradero.",
+  location: "El Retiro, Colombia",
+  phone: "+57 312 253 2328",
+  email: "miltonalejo.cr@gmail.com",
   photo: "/images/profile.jpg",
 };
 
 export const languages: Skill[] = [
-  { name: "Español", level: 100 },
-  { name: "Inglés", level: 70 },
+  { name: "Español", proficiency: "Nativo" },
+  { name: "Inglés", proficiency: "B2 certificado" },
 ];
 
 export const programmingLanguages: Skill[] = [
-  { name: "TypeScript", level: 75 },
-  { name: "JavaScript", level: 80 },
-  { name: "HTML & CSS", level: 85 },
-  { name: "Java", level: 65 },
-  { name: "SQL", level: 60 },
+  { name: "Java (Spring Boot)" },
+  { name: "Python" },
+  { name: "R" },
+  { name: "React" },
+  { name: "Gherkin" },
 ];
 
-export const extraSkills = ["React y Next.js", "Diseño responsive", "Git y GitHub", "Trabajo en equipo"];
+export const skillCategories = [
+  { title: "Metodologías", items: ["Lean Startup", "Scrum", "Kanban", "Design Thinking", "Gestión ágil", "IA aplicada"] },
+  { title: "Tecnologías", items: ["Power Platform", "Docker", "Git", "Kubernetes"] },
+  { title: "Bases de datos", items: ["MySQL", "PostgreSQL", "Modelado de datos"] },
+];
 
 export const knowledge: Knowledge[] = [
-  { title: "Desarrollo web", description: "Interfaces rápidas y adaptables", icon: CodeXml },
-  { title: "Experiencia de usuario", description: "Diseño centrado en las personas", icon: MonitorSmartphone },
-  { title: "Desarrollo frontend", description: "Componentes reutilizables", icon: Braces },
-  { title: "Accesibilidad", description: "Experiencias inclusivas", icon: Accessibility },
-  { title: "Diseño de interfaces", description: "Sistemas visuales coherentes", icon: Palette },
-  { title: "Pensamiento analítico", description: "Soluciones basadas en datos", icon: ChartNoAxesCombined },
+  { title: "Automatización empresarial", description: "Power Platform, Python y mejora de procesos", icon: Braces },
+  { title: "Analítica y BI", description: "Power BI, análisis de datos y reportes", icon: ChartNoAxesCombined },
+  { title: "Desarrollo backend", description: "APIs REST con FastAPI y Java / Spring Boot", icon: CodeXml },
+  { title: "Inteligencia artificial", description: "Iniciativas de IA aplicada al negocio", icon: Sparkles },
+  { title: "Infraestructura", description: "Docker, Kubernetes, Git y redes", icon: MonitorSmartphone },
+  { title: "Datos y bases de datos", description: "MySQL, PostgreSQL y modelado de datos", icon: Palette },
 ];
 
 export const education: Education[] = [
   {
-    institution: "Tu universidad",
-    program: "Ingeniería de Sistemas",
-    date: "En curso",
-    description: "Formación en ingeniería de software, estructuras de datos, bases de datos y desarrollo de soluciones tecnológicas.",
+    institution: "Universidad de Antioquia",
+    program: "Ingeniería de Sistemas · Noveno semestre",
+    date: "2022–2026",
+    description: "Formación universitaria en Ingeniería de Sistemas.",
   },
   {
-    institution: "Formación complementaria",
-    program: "Desarrollo de software",
-    date: "Aprendizaje continuo",
-    description: "Exploración práctica de herramientas web, diseño de interfaces y buenas prácticas para crear productos digitales.",
+    institution: "Oracle University",
+    program: "Business Agility",
+    date: "2023",
+    description: "Formación complementaria en agilidad de negocio.",
   },
   {
-    institution: "Proyectos académicos",
-    program: "Ingeniería web",
-    date: "2026",
-    description: "Aplicación de fundamentos de frontend, trabajo con Git y despliegue de aplicaciones web modernas.",
+    institution: "Oracle University",
+    program: "Java y Spring Boot",
+    date: "2023",
+    description: "Formación técnica en desarrollo de software con Java y Spring Boot.",
+  },
+];
+
+export const experience: Experience[] = [
+  {
+    organization: "Fiduciaria Bancolombia",
+    role: "Practicante · Gerencia Articuladora de Negocios Fiduciarios",
+    date: "2026 · Actual",
+    description: [
+      "Desarrollo y entrego automatizaciones con Microsoft Power Platform y Python para optimizar flujos operativos.",
+      "Impulso iniciativas de inteligencia artificial aplicada a la toma de decisiones y la eficiencia operativa.",
+      "Participo en la evolución del Tablero 360 y en la arquitectura y el stack tecnológico objetivo.",
+    ],
+  },
+  {
+    organization: "Alcaldía de El Retiro",
+    role: "Auxiliar de Programación · Sistema de Reservas",
+    date: "2025",
+    description: [
+      "Diseñé e implementé una API REST con FastAPI y arquitectura hexagonal para gestionar espacios públicos municipales.",
+      "Integré visualizaciones de reportes y métricas de uso para apoyar decisiones operativas en tiempo real.",
+      "Trabajé con el cliente para levantar requerimientos y entregar una solución alineada con el negocio.",
+    ],
+  },
+  {
+    organization: "Universidad de Antioquia · SIU",
+    role: "Auxiliar de Programación",
+    date: "2025",
+    description: [
+      "Implementé soluciones con Power Automate y Power BI para facilitar el análisis de datos institucionales.",
+      "Diseñé flujos automatizados que redujeron tiempos de procesamiento en tareas operativas críticas.",
+    ],
+  },
+  {
+    organization: "Universidad de Antioquia · Laboratorio de Accesibilidad",
+    role: "Auxiliar Administrativo",
+    date: "2025",
+    description: [
+      "Automaticé procesos administrativos con Power Automate, Power Apps, Excel avanzado y SharePoint.",
+      "Optimicé flujos internos para reducir trabajo manual y mejorar tiempos de respuesta.",
+    ],
   },
 ];
 
 export const projects: Project[] = [
   {
-    title: "Portafolio profesional",
-    category: "Desarrollo web",
-    description: "Una página personal para presentar mi perfil, formación y proyectos.",
-    details: "Portafolio de una sola página inspirado en un diseño de Figma. Está construido con Next.js, TypeScript y Tailwind CSS, con componentes organizados mediante Atomic Design, navegación por secciones y diálogos accesibles.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    title: "Sistema municipal de reservas",
+    category: "Desarrollo backend",
+    description: "API para la gestión de espacios públicos municipales.",
+    details: "Diseño e implementación de una API REST con FastAPI y arquitectura hexagonal. La solución incorporó visualizaciones de reportes y métricas de uso para respaldar decisiones operativas.",
+    technologies: ["Python", "FastAPI", "REST", "Arquitectura hexagonal"],
     theme: "violet",
   },
   {
-    title: "Interfaz de producto",
-    category: "Diseño de interfaces",
-    description: "Exploración de una interfaz clara para una experiencia digital cotidiana.",
-    details: "Un ejercicio académico de diseño y prototipado centrado en jerarquía visual, responsive design y componentes reutilizables. Reemplaza esta descripción por los detalles de un proyecto propio.",
-    technologies: ["React", "UX/UI", "Responsive"],
+    title: "Automatización de procesos",
+    category: "Power Platform · Python",
+    description: "Automatizaciones para mejorar flujos operativos de negocio.",
+    details: "Trabajo actual en desarrollo y entrega de automatizaciones con Microsoft Power Platform y Python. Los detalles específicos de procesos internos se mantienen fuera de esta página pública.",
+    technologies: ["Power Automate", "Power Platform", "Python"],
     theme: "mint",
   },
   {
-    title: "Aplicación académica",
-    category: "Ingeniería de software",
-    description: "Una solución web desarrollada como parte de mi proceso de aprendizaje.",
-    details: "Este espacio está preparado para describir un proyecto académico: su problema, las decisiones técnicas, el aporte personal y lo aprendido. Agrega enlaces públicos al repositorio y a la demostración cuando estén disponibles.",
-    technologies: ["JavaScript", "Git", "Web"],
+    title: "Analítica institucional",
+    category: "Datos · Business Intelligence",
+    description: "Soluciones para habilitar análisis y decisiones basadas en datos.",
+    details: "Implementación de soluciones con Power Automate y Power BI para análisis de datos institucionales y toma de decisiones. La información se presenta a nivel general para no exponer datos internos.",
+    technologies: ["Power BI", "Power Automate", "Análisis de datos"],
     theme: "coral",
   },
 ];
 
 export const socialProfiles: SocialProfile[] = [
-  { label: "GitHub", href: "https://github.com/", icon: Github },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
-  { label: "Ideas y diseño", href: "https://www.behance.net/", icon: Lightbulb },
+  { label: "GitHub", href: "https://github.com/MiltonCuervo", icon: Github },
+  { label: "LinkedIn", icon: Linkedin },
 ];

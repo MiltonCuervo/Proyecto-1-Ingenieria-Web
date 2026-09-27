@@ -5,10 +5,10 @@ import { education } from "@/data/portfolio";
 export function EducationSection() {
   return (
     <section className="content-section education-section" id="educacion" aria-labelledby="education-title">
-      <SectionHeading title="Educación" id="education-title" description="Aprender, practicar y compartir: el camino que da forma a mi perfil profesional." />
+      <SectionHeading title="Educación" id="education-title" description="Formación profesional y técnica." />
       <div className="education-card">
         {education.map((item) => (
-          <article className="education-item" key={item.institution}>
+          <article className="education-item" key={`${item.institution}-${item.program}`}>
             <div className="education-item__meta">
               <h3>{item.institution}</h3>
               <p>{item.program}</p>

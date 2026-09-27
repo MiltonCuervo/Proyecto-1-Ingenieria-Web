@@ -2,7 +2,8 @@ import type { LucideIcon } from "lucide-react";
 
 export interface Skill {
   name: string;
-  level: number;
+  level?: number;
+  proficiency?: string;
 }
 
 export interface Knowledge {
@@ -18,6 +19,13 @@ export interface Education {
   description: string;
 }
 
+export interface Experience {
+  organization: string;
+  role: string;
+  date: string;
+  description: string[];
+}
+
 export interface Project {
   title: string;
   category: string;
@@ -31,6 +39,6 @@ export interface Project {
 
 export interface SocialProfile {
   label: string;
-  href: string;
+  href?: string;
   icon: LucideIcon;
 }

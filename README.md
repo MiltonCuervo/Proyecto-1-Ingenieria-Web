@@ -6,8 +6,8 @@ Portafolio personal de una sola página desarrollado con Next.js, React, TypeScr
 
 - Diseño adaptable para escritorio, tablet y móvil.
 - Perfil con diálogo personalizado para ampliar la presentación.
-- Barras de nivel accesibles para idiomas y tecnologías.
-- Tarjetas de conocimientos y línea de tiempo educativa reutilizables.
+- Conocimientos, cuatro experiencias laborales y formación en ingeniería y cursos técnicos.
+- Idiomas y lenguajes mostrados con el nivel declarado en la hoja de vida; no se infieren porcentajes ausentes.
 - Carrusel horizontal de proyectos con controles y diálogos de detalle.
 - Enlaces a repositorios y demos listos para añadir a cada proyecto.
 - Animaciones sutiles con Framer Motion y respeto por `prefers-reduced-motion`.
@@ -34,7 +34,7 @@ pnpm start
 
 ## Personalización del contenido
 
-Edita [`src/data/portfolio.ts`](src/data/portfolio.ts) para actualizar perfil, habilidades, educación, proyectos y redes. Confirma especialmente los niveles de idioma y tecnología, las instituciones y las descripciones de proyecto: son contenido inicial editable, no credenciales verificadas. Los campos de correo y enlaces de cada proyecto están vacíos de forma intencional; agrega solo datos y enlaces que quieras publicar.
+Edita [`src/data/portfolio.ts`](src/data/portfolio.ts) para actualizar perfil, habilidades, experiencia, educación, proyectos y redes. La información profesional y la fotografía actual se incorporaron desde la hoja de vida proporcionada. El enlace de LinkedIn está pendiente porque el PDF no especifica su URL. Los porcentajes de habilidad tampoco aparecen en el CV, por lo que se muestran niveles o nombres sin atribuir puntuaciones. Agrega enlaces de repositorios y demos cuando quieras ampliar el portafolio.
 
 Reemplaza `public/images/profile.jpg` por una fotografía propia cuadrada, optimizada y con permiso de uso. No es necesario cambiar los componentes para actualizar el contenido.
 
@@ -67,6 +67,7 @@ flowchart TD
   Layout --> Right[SidebarRight]
   Center --> Profile[ProfileSection]
   Center --> Knowledge[KnowledgeSection]
+  Center --> Experience[ExperienceSection]
   Center --> Education[EducationSection]
   Center --> Portfolio[PortfolioSection]
   Center --> Footer[SiteFooter]
@@ -74,6 +75,7 @@ flowchart TD
   Left --> ContactItem
   Right --> SocialLink
   Knowledge --> Heading[SectionHeading]
+  Experience --> ExperienceItem[ExperienceItem]
   Education --> Heading
   Portfolio --> Project[ProjectCard]
   Project --> Badge
@@ -108,7 +110,7 @@ No se necesitan variables de entorno para la versión base. No publiques correo,
 
 ## Recomendaciones para la entrega
 
-- Sustituye la foto de referencia, verifica los datos personales y agrega enlaces reales a GitHub, LinkedIn, repositorios y demostraciones.
+- Verifica que los datos personales publicados sean los que quieres compartir y agrega el enlace correcto de LinkedIn, repositorios y demostraciones.
 - Usa imágenes propias u optimizadas y escribe descripciones breves que expliquen problema, aporte y tecnologías.
 - Revisa la experiencia en móvil, teclado, contraste, diálogos y desplazamiento horizontal antes de entregar.
 - Mantén commits pequeños con mensajes descriptivos y verifica que la rama `main` desplegada corresponda con el último commit de entrega.

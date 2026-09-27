@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { ModalDialog } from "@/components/molecules/ModalDialog";
 import { EducationSection } from "@/components/organisms/EducationSection";
+import { ExperienceSection } from "@/components/organisms/ExperienceSection";
 import { KnowledgeSection } from "@/components/organisms/KnowledgeSection";
 import { PortfolioSection } from "@/components/organisms/PortfolioSection";
 import { ProfileSection } from "@/components/organisms/ProfileSection";
@@ -18,6 +19,7 @@ export function HomePage() {
     <MainLayout>
       <ProfileSection onOpenAbout={() => setAboutOpen(true)} />
       <KnowledgeSection />
+      <ExperienceSection />
       <EducationSection />
       <PortfolioSection />
       <SiteFooter />

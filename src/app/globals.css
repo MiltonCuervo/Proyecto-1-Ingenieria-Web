@@ -70,7 +70,7 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible {
 .sidebar-contact { padding-top: 16px; }
 .contact-item { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 5px 0; font-size: 11px; }
 .contact-item > span { color: #53525b; flex-shrink: 0; }
-.contact-item strong { color: #46454e; font-weight: 600; text-align: right; }
+.contact-item strong { min-width: 0; color: #46454e; font-weight: 600; text-align: right; overflow-wrap: anywhere; }
 .contact-item a, .available { display: inline-flex; align-items: center; justify-content: flex-end; gap: 3px; }
 .contact-item .available { color: #68a338; }
 .skill-list { display: grid; gap: 11px; }
@@ -81,6 +81,8 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible {
 .extra-skills { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; color: #777781; font-size: 10.5px; }
 .extra-skills li { display: flex; align-items: center; gap: 8px; }
 .extra-skills li span { display: inline-grid; place-items: center; width: 15px; height: 15px; color: var(--accent-dark); border: 1px solid #f3dba5; border-radius: 4px; font-size: 11px; }
+.skill-category + .skill-category { margin-top: 13px; }
+.skill-category h4 { margin: 0 0 8px; color: #777781; font-size: 10px; font-weight: 750; }
 
 .main-scroll { height: 100dvh; overflow: auto; background: var(--canvas); scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: #d7d5df transparent; }
 .main-content { width: min(100%, 1200px); margin: 0 auto; padding: 0 28px; }
@@ -120,6 +122,16 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible {
 .knowledge-card h3 { margin: 4px 0 0; font-size: 12px; font-weight: 750; letter-spacing: -.025em; }
 .knowledge-card p { margin: 7px 0 0; color: #898892; font-size: 10px; }
 .education-section { padding-top: 34px; }
+.experience-section { padding-top: 34px; }
+.experience-card { padding: 0 27px; background: var(--paper); }
+.experience-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.experience-item:last-child { border-bottom: 0; }
+.experience-item__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.experience-item__header h3 { margin: 0; font-size: 12px; font-weight: 750; }
+.experience-item__header p { margin: 6px 0 0; color: #73727c; font-size: 10px; }
+.experience-item ul { display: grid; gap: 7px; margin: 13px 0 0; padding: 0; list-style: none; }
+.experience-item li { position: relative; padding-left: 15px; color: #85848d; font-size: 10.5px; line-height: 1.7; }
+.experience-item li::before { position: absolute; top: .68em; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); content: ""; }
 .education-card { padding: 0 27px; background: var(--paper); }
 .education-item { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.25fr); gap: 30px; padding: 23px 0; border-bottom: 1px solid var(--line); }
 .education-item:last-child { border-bottom: 0; }
@@ -174,6 +186,7 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible {
 .sidebar-right nav { display: flex; flex-direction: column; gap: 10px; }
 .social-link { display: grid; place-items: center; width: 35px; height: 35px; color: #332d21; background: var(--accent); border-radius: 50%; transition: transform .18s ease, background .18s ease; }
 .social-link:hover { transform: translateY(-2px); background: #ffd36c; }
+.social-link--disabled { color: #78747a; background: #eeedf0; cursor: default; }
 .skip-link { position: fixed; z-index: 30; left: 12px; top: 12px; padding: 9px 13px; color: #201e26; background: #fff; border: 1px solid #ddd; border-radius: 5px; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 
@@ -254,6 +267,11 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible {
   .knowledge-card h3 { font-size: 10px; }
   .knowledge-card p { font-size: 9px; line-height: 1.5; }
   .education-card { padding-inline: 16px; }
+  .experience-card { padding-inline: 16px; }
+  .experience-item { padding: 18px 0; }
+  .experience-item__header { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .experience-item__header h3 { font-size: 11px; }
+  .experience-item li { font-size: 10px; }
   .education-item { grid-template-columns: 1fr; gap: 11px; padding: 18px 0; }
   .education-item__meta { display: grid; grid-template-columns: 1fr auto; gap: 6px 8px; align-items: center; }
   .education-item__meta h3 { grid-column: 1 / -1; }
